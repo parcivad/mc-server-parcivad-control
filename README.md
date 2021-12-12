@@ -23,7 +23,7 @@ List of all available commands
 | tempunban | /tempunban {player} | Unbans a tempbaned player
 | commmands | /commands {command} {on/off} | Turn on or off commands of the plugin
 | home | /home {set/remove} | Set a home and teleport each 5 minutes to the position
-| zone | /zone {add/remove/friend/enemy} {add/remove/list/x} {player/z} {zoneName/x2} {z2} | Lets you set a zone with a specified name, all the friends of a zone are able to add/remove enemies or add/remove friends of the zone. When all friends of a zone are offline the area will be protected by the plugin. If the friends are online enemies get a warning and bad effects in the zone 
+| zone | /zone {add/remove/friend/enemy} {add/remove/list/x} {player/z} {zoneName/x2} {z2} | Lets you set a zone with a specified name, all the friends of a zone are able to add/remove enemies or add/remove friends of the zone. When all friends of a zone are offline the area will be protected to enemies by the plugin. If the friends are online enemies will get a warning by entering the zone and will be given bad effects.
 
 ## Permissions
 | Permission | Use |
@@ -42,3 +42,6 @@ zone.noProtection | Player is not affected by the offline zone protection
 
 ## SOON
 shop feature maybe comming soon
+
+### comment
+🧇just a hobby plugin, do not take the source code to serious 😉

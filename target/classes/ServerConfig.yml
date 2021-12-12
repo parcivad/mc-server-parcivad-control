@@ -1,0 +1,7 @@
+Server:
+  LockMode: true
+  message: ""
+  Boost-Height: 130
+  Motd:
+  MotdLocked:
+  Commands:

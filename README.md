@@ -8,6 +8,10 @@
 ParcivadControl is a mc plugin that brings some popular and helpful commands in your survival Server. It also includes a prefix Tablist, clean Chat and Admin-Commands.\
 One of the biggest differences to other plugins is that you have to choice to decide what feature is active or not. With `/commands` you can turn specified features of and customize the plugin for your need. 
 
+## Table of Contents
+
+- [All Commands](#all-commands)
+
 ## All Commands
 ### Commands
 All commands can be turned on or off with the `/commands` Command.\

@@ -11,6 +11,17 @@ One of the biggest differences to other plugins is that you have to choice to de
 ## Table of Contents
 
 - [All Commands](#all-commands)
+  - [Commands](#commands)
+  - [Enderchest](#enderchest)
+  - [Tpa](#teleportation-request)
+  - [Home](#home)
+  - [Spawn](#spawn)
+  - [Stats](#stats)
+  - [Seed](#seed)
+  - [Lock](#lock)
+  - [Inventory](#inventory)
+  - [Zone](#zone)
+  
 
 ## All Commands
 ### Commands
@@ -90,7 +101,106 @@ The `/spawn` command is so simple that there is no need for an explaination. It 
   <img width="auto" height="auto" src="https://github.com/parcivad/mc-server-parcivad-control/blob/main/img/stats.png?raw=true">
 </p>
 
+### Seed
+`/seed` overwrites the normal seed function to hide it for other players. Only operatores can see the Seed.
 
+```diff
+- permission: Server op | to use the command
+```
+
+### Lock
+`/lock` is a command that should support the people that manage the server. It will lock the server for everyone expect users with the permission `server.settings` can join.\
+There are also two different motds you can setup in ``ServerConfig.yml``. One for the unlocked state and the other one for the locked.
+
+__How to use the command__\
+You can unlock the server by typing ``/lock off``, after that or at any time you can set your personal lock message with `/lock message {message...`
+<p align="center">
+  <img width="auto" height="auto" src="https://github.com/parcivad/mc-server-parcivad-control/blob/main/img/lock-command.png?raw=true">
+</p>
+
+When the server gets locked with ``/lock on`` all players get kicked and the server changes the motd to the locked.
+<p align="center">
+  <img width="auto" height="auto" src="https://github.com/parcivad/mc-server-parcivad-control/blob/main/img/lock-motd.png?raw=true">
+</p>
+
+```diff
+- permission: manage.lock | to manage the lock command
+- permission: server.settings | to join when server locked
+```
+
+### Inventory
+The `/inv`, short form for inventory, command is a simple Admin command to watch in other inventorys and change them.
+
+__How to use the command__\
+easily type ``/inv {player}`` and the players inventory will open up
+<p align="center">
+  <img width="auto" height="auto" src="https://github.com/parcivad/mc-server-parcivad-control/blob/main/img/inv.png?raw=true">
+</p>
+The top row will be the players hotbar!
+
+```diff
+- permission: inventory.open | to use this command
+```
+
+### Position
+Helpful should be the `/pos` command. It allows every player to save locations by name and then reopen them to show their cooridnates
+
+__How to use the command__\
+Positions can be saved by typing `/pos save {name}`. In the feedback message you can check if the coordinates are right.
+<p align="center">
+  <img width="auto" height="auto" src="https://github.com/parcivad/mc-server-parcivad-control/blob/main/img/pos-save.png?raw=true">
+</p>
+
+When you want a list of your locations you can do this by typing `/pos list`, then you can call them by just typing the name after pos like `/pos {name}`
+<p align="center">
+  <img width="auto" height="auto" src="https://github.com/parcivad/mc-server-parcivad-control/blob/main/img/pos-call.png?raw=true">
+</p>
+
+With `/pos delete {name}` you can easily delete your saved locations.
+
+### Zone
+Zone gives the opportunity to select an area that will be protected from enemies and welcome friends.\
+The Zone function is build up a of a friend/neutral/enemy table.
+
+| Friends | Neutral | Enemy | 
+|-----|-----|-----|
+| Can add/remove other friends and are able to add/remove enemies. They will also get notified if a enemy is near there zone or in there zone | Will be completly ignored (world will appear as an normal vanilla area) | Enemies will get bad effect by entering a zone. Will get notified if there near a zone where he is an enemy |
+
+When all friends of a certain zone are offline the area will fully protected against enemies. Neutrals will recognize nothing (no change)
+
+__How to use the command__\
+First there has to be a zone. A zone can be added with ``/zone {name} x z x2 z2``. The coordinates define the size of the zone.
+<p align="center">
+  <img width="auto" height="auto" src="https://github.com/parcivad/mc-server-parcivad-control/blob/main/img/zone-add-command.png?raw=true">
+  <img width="auto" height="auto" src="https://github.com/parcivad/mc-server-parcivad-control/blob/main/img/zone-add-answer.png?raw=true">
+</p>
+
+After that you can look up for the friend list with ``/zone friend list {zoneName}`` or the enemy list `/zone enemy list {zoneName}`.
+<p align="center">
+  <img width="auto" height="auto" src="https://github.com/parcivad/mc-server-parcivad-control/blob/main/img/zone-lists.png?raw=true">
+</p>
+
+Like you can see there are no enemies in the list and only one friend. You can fill these lists up with ``/zone friend add {name}`` or ``/zone enemy add {name}`` 
+<p align="center">
+  <img width="auto" height="auto" src="https://github.com/parcivad/mc-server-parcivad-control/blob/main/img/zone-add.png?raw=true">
+</p>
+
+Also existing is the option to delete a zone with `/zone delete {name}`, but be carefull because this step cant be reversed!
+
+__Function__\
+If an enemy will enter or walk by your are these messages will appear:
+
+_ENEMY SIDE_:
+<p align="center">
+  <img width="auto" height="auto" src="https://github.com/parcivad/mc-server-parcivad-control/blob/main/img/zone-enemy-near.png?raw=true">
+  <img width="auto" height="auto" src="https://github.com/parcivad/mc-server-parcivad-control/blob/main/img/zone-enemy-in.png?raw=true">
+</p>
+
+_FRIEND SIDE_:
+<p align="center">
+  <img width="auto" height="auto" src="https://github.com/parcivad/mc-server-parcivad-control/blob/main/img/zone-friend-near.png?raw=true">
+  <img width="auto" height="auto" src="https://github.com/parcivad/mc-server-parcivad-control/blob/main/img/zone-friend-in.png?raw=true">
+</p>
 
 
 ## Commands
@@ -98,33 +208,19 @@ List of all available commands
 
 | Command | Use | Description |
 |---------|--------------------------|------------------------|
- 0| tpa | /tpa {player/revoke/accept/deny} {player} | Ask a player to teleport to his location
-| lock | /lock {on/off/message} {message... | Only player with permission can join
-| pos | /pos {save/delete/name} {name} | Saves a position for the player in a config
- 0| ec | /ec {player} | A Command to open your enderchest immediately
-| inv | /inv {player} | Opens the inventory of another player
- 0| spawn | /spawn | teleports the player to the spawn
-| stats | /stats {player} | Shows some statistics form the world data
-| seed | /seed | show the player the seed
 | tempban | /tempban {player} {time} {m/h} {reason... | Bans a player for a certain time
 | tempunban | /tempunban {player} | Unbans a tempbaned player
-| commmands | /commands {command} {on/off} | Turn on or off commands of the plugin
- 0| home | /home {set/remove} | Set a home and teleport each 5 minutes to the position
 | zone | /zone {add/remove/friend/enemy} {add/remove/list/x} {player/z} {zoneName/x2} {z2} | Lets you set a zone with a specified name, all the friends of a zone are able to add/remove enemies or add/remove friends of the zone. When all friends of a zone are offline the area will be protected to enemies by the plugin. If the friends are online enemies will get a warning by entering the zone and will be given bad effects.
 
 ## Permissions
 | Permission | Use |
 |------------|---------------|
-enderchest.open | Player is able to open the enderchest of another player
-inventory.open | Player is able to open the inventory of another player
 tablist.owner | Gives the player owner prefix
 tablist.mod | Gives the player moderator prefix
 tablist.dev | Gives the player developer prefix
-manage.lock | Player is able to lock or unlock the server for others
 manage.ban | Player is able to tempban other players
 manage.unban | Player is able to unban other players
 manage.zone | Player is able to create or delete a zone with x and z coordinates
-home.noWait | Player has no 5 minute limit for home teleportation
 zone.noProtection | Player is not affected by the offline zone protection 
 
 ## SOON

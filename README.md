@@ -231,6 +231,19 @@ Just type ``/tempunban {name}``
 - permission: manage.unban | to use command 
 ```
 
+### Chat
+With `/chat` there is the possibility between a broadcast message and privat or public talk
+
+To switch form public to privat talk type `/chat private {player} {player} {player} ...`
+
+To toggle back to public just type `/chat public`
+
+With the needed permission you can type `/chat broadcast {message...` and it will appear bigger in chat. In the message you can use color codes with `&`
+
+```diff
+- permission: chat.color | Color codes in normal chat
+- permission: chat.broadcast | to use broadcast function
+```
 ## Tablist
 The plugin will create other chat format and a prefix for players with these Roles
 

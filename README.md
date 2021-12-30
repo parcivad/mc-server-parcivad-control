@@ -16,8 +16,8 @@ __How to use the command__\
 When you first installed the plugin and use a command the plugin will give you a deny for using it because its not active.
 With `/commands` you can change the state to active
 
-<p align="center">
-  <img width="auto" height="auto" src="https://github.com/parcivad/img/blob/main/Home%20Connect%20Login.png">
+<p align="left">
+  <img width="auto" height="auto" src="https://github.com/parcivad/mc-server-parcivad-control/blob/main/img/commands-turn-on.png?raw=true">
 </p>
 
 After that the command will work, you can easily turn it off again at any time.
@@ -30,7 +30,7 @@ __How to use the command__\
 This command is not complex. Just type `/ec` and a inventory of your enderchest will popup. To open a enderchest of another player you can type his name at the second argument of the command.
 
 <p align="center">
-  <img width="auto" height="auto" src="https://github.com/parcivad/img/blob/main/Home%20Connect%20Login.png">
+  <img width="auto" height="auto" src="https://github.com/parcivad/mc-server-parcivad-control/blob/main/img/enderchest-other-player.png?raw=true">
 </p>
 
 ### Teleportation Request
@@ -40,28 +40,15 @@ __How to use the command__\
 To start you have to request a player for a teleportation. For that just type `/tpa {player}`.\
 The player then will get a request in his chat
 <p align="center">
-  <img width="auto" height="auto" src="https://github.com/parcivad/img/blob/main/Home%20Connect%20Login.png">
+  <img width="auto" height="auto" src="https://github.com/parcivad/mc-server-parcivad-control/blob/main/img/tpa-request.png?raw=true">
 </p>
 
 The player can decide to accept or deny by typing the command. Alternative he can _hover_ over `accept` or `deny` and click to take action.
 <p align="center">
-  <img width="auto" height="auto" src="https://github.com/parcivad/img/blob/main/Home%20Connect%20Login.png">
+  <img width="auto" height="auto" src="https://github.com/parcivad/mc-server-parcivad-control/blob/main/img/tpa-request-hover.png?raw=true">
 </p>
 
-### Teleportation Request
-With the popular `/tpa` command you can ask other online players to teleport to them. They can accept your request or deny it. In the first case you would be teleported to the player you requested. Important to know is that there is no cooldown for the teleportation.
-
-__How to use the command__\
-To start you have to request a player for a teleportation. For that just type `/tpa {player}`.\
-The player then will get a request in his chat
-<p align="center">
-  <img width="auto" height="auto" src="https://github.com/parcivad/img/blob/main/Home%20Connect%20Login.png">
-</p>
-
-The player can decide to accept or deny by typing the command. Alternative he can _hover_ over `accept` or `deny` and click to take action.
-<p align="center">
-  <img width="auto" height="auto" src="https://github.com/parcivad/img/blob/main/Home%20Connect%20Login.png">
-</p>
+> **DOCUMENTATION NOT DONE YET**
 
 
 ## Commands

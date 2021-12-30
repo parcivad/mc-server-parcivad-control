@@ -1,5 +1,7 @@
 [![JavaJDK](https://img.shields.io/badge/Java%20JDK-17-orange?logo=java&style=flat-square)](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
 [![Minecraft](https://img.shields.io/badge/Minecraft-1.18.1-success?logo=minecraft&style=flat-square)](https://minecraft.net)
+[![Spigot](https://img.shields.io/badge/Spigot-%20-orange?&style=flat-square)](http://spigotmc.org)
+[![Paper](https://img.shields.io/badge/Paper-%20-orange?&style=flat-square)](https://papermc.io)
 [![Discord](https://img.shields.io/discord/690934524955197471?label=Discord&logo=discord&style=flat-square)](https://discord.gg/C2HrEeCQ)
 
 # mc-server-parcivad-control

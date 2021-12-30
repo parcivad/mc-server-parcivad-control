@@ -234,6 +234,7 @@ Just type ``/tempunban {name}``
 ### Chat
 With `/chat` there is the possibility between a broadcast message and privat or public talk
 
+__How to use the command__\
 To switch form public to privat talk type `/chat private {player} {player} {player} ...`
 
 To toggle back to public just type `/chat public`

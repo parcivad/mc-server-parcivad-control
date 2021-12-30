@@ -21,6 +21,10 @@ One of the biggest differences to other plugins is that you have to choice to de
   - [Lock](#lock)
   - [Inventory](#inventory)
   - [Zone](#zone)
+  - [Tempban](#tempban)
+  - [Tempunban](#tempunban)
+- [Tablist](#tablist)
+- [Comment](#comment) 
   
 
 ## All Commands
@@ -187,6 +191,11 @@ Like you can see there are no enemies in the list and only one friend. You can f
 
 Also existing is the option to delete a zone with `/zone delete {name}`, but be carefull because this step cant be reversed!
 
+```diff
+- permission: manage.zone | to add or remove zones
+- permission: zone.noProtection | people won't be affected by the zone protection
+```
+
 __Function__\
 If an enemy will enter or walk by your are these messages will appear:
 
@@ -202,29 +211,35 @@ _FRIEND SIDE_:
   <img width="auto" height="auto" src="https://github.com/parcivad/mc-server-parcivad-control/blob/main/img/zone-friend-in.png?raw=true">
 </p>
 
+### Tempban
+`/tempban` is a simple admin command to ban player for a certain time _m_ stands for minutes and _h_ stands for hours
 
-## Commands
-List of all available commands
+__How to use the command__\
+Just type ``/tempban {name} {time} {m/h} {reason...``
 
-| Command | Use | Description |
-|---------|--------------------------|------------------------|
-| tempban | /tempban {player} {time} {m/h} {reason... | Bans a player for a certain time
-| tempunban | /tempunban {player} | Unbans a tempbaned player
-| zone | /zone {add/remove/friend/enemy} {add/remove/list/x} {player/z} {zoneName/x2} {z2} | Lets you set a zone with a specified name, all the friends of a zone are able to add/remove enemies or add/remove friends of the zone. When all friends of a zone are offline the area will be protected to enemies by the plugin. If the friends are online enemies will get a warning by entering the zone and will be given bad effects.
+```diff
+- permission: manage.ban | to use command 
+```
 
-## Permissions
-| Permission | Use |
+### Tempunban
+`/tempban` is a simple admin command to ban player for a certain time _m_ stands for minutes and _h_ stands for hours
+
+__How to use the command__\
+Just type ``/tempunban {name}``
+
+```diff
+- permission: manage.unban | to use command 
+```
+
+## Tablist
+The plugin will create other chat format and a prefix for players with these Roles
+
+| Permission | Prefix |
 |------------|---------------|
-tablist.owner | Gives the player owner prefix
-tablist.mod | Gives the player moderator prefix
-tablist.dev | Gives the player developer prefix
-manage.ban | Player is able to tempban other players
-manage.unban | Player is able to unban other players
-manage.zone | Player is able to create or delete a zone with x and z coordinates
-zone.noProtection | Player is not affected by the offline zone protection 
-
-## SOON
-shop feature maybe comming soon
+tablist.owner | Owner | {name}
+tablist.mod | Mod | {name}
+tablist.dev | Dev | {name}
+everyone | Player | {name}
 
 ### comment
 🧇just a hobby plugin, do not take the source code to serious 😉

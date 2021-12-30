@@ -8,7 +8,7 @@
 ParcivadControl is a mc plugin that brings some popular and helpful commands in your survival Server. It also includes a prefix Tablist, clean Chat and Admin-Commands.\
 One of the biggest differences to other plugins is that you have to choice to decide what feature is active or not. With `/commands` you can turn specified features of and customize the plugin for your need. 
 
-## Features
+## All Commands
 ### Commands
 All commands can be turned on or off with the `/commands` Command.\
 
@@ -22,6 +22,10 @@ With `/commands` you can change the state to active
 
 After that the command will work, you can easily turn it off again at any time.
 
+```diff
+- permission: manage.commands | to use this command
+```
+
 ### Enderchest
 With `/ec`, short form for enderchest, you can open your own enderchest at any time in the game. Its like a "backpack" function. The only requirement needed for the player is the achievment of
 opening a enderchest in this world. Roles with the permission `enderchest.open` are able to open the enderchest of other players.
@@ -32,6 +36,10 @@ This command is not complex. Just type `/ec` and a inventory of your enderchest 
 <p align="center">
   <img width="auto" height="auto" src="https://github.com/parcivad/mc-server-parcivad-control/blob/main/img/enderchest-other-player.png?raw=true">
 </p>
+
+```diff
+- permission: enderchest.open | open other players chest
+```
 
 ### Teleportation Request
 With the popular `/tpa` command you can ask other online players to teleport to them. They can accept your request or deny it. In the first case you would be teleported to the player you requested. Important to know is that there is no cooldown for the teleportation.
@@ -48,7 +56,37 @@ The player can decide to accept or deny by typing the command. Alternative he ca
   <img width="auto" height="auto" src="https://github.com/parcivad/mc-server-parcivad-control/blob/main/img/tpa-request-hover.png?raw=true">
 </p>
 
-> **DOCUMENTATION NOT DONE YET**
+### Home
+Also known command `/home` allows you to set your home and teleport each five minutes to the saved home location. Players with the `home.noWait` permission dont have to wait.
+
+__How to use the command__\
+First you will set your home, because that is needed for the teleportation.
+<p align="center">
+  <img width="auto" height="auto" src="https://github.com/parcivad/mc-server-parcivad-control/blob/main/img/home-set.png?raw=true">
+</p>
+
+After that you can teleport there every five minutes
+<p align="center">
+  <img width="auto" height="auto" src="https://github.com/parcivad/mc-server-parcivad-control/blob/main/img/home-teleport.png?raw=true">
+</p>
+
+With `/home remove` you can delete the saved home position
+
+```diff
+- permission: home.noWait | for no cooldown
+```
+
+### Spawn
+The `/spawn` command is so simple that there is no need for an explaination. It just teleport you to the __world__ spawn.
+
+### Stats
+`/stats` will show information of the world data. Also statistics of other player can requested with `/stats {player}`
+
+<p align="center">
+  <img width="auto" height="auto" src="https://github.com/parcivad/mc-server-parcivad-control/blob/main/img/stats.png?raw=true">
+</p>
+
+
 
 
 ## Commands
@@ -56,18 +94,18 @@ List of all available commands
 
 | Command | Use | Description |
 |---------|--------------------------|------------------------|
-| tpa | /tpa {player/revoke/accept/deny} {player} | Ask a player to teleport to his location
+ 0| tpa | /tpa {player/revoke/accept/deny} {player} | Ask a player to teleport to his location
 | lock | /lock {on/off/message} {message... | Only player with permission can join
 | pos | /pos {save/delete/name} {name} | Saves a position for the player in a config
-| ec | /ec {player} | A Command to open your enderchest immediately
+ 0| ec | /ec {player} | A Command to open your enderchest immediately
 | inv | /inv {player} | Opens the inventory of another player
-| spawn | /spawn | teleports the player to the spawn
+ 0| spawn | /spawn | teleports the player to the spawn
 | stats | /stats {player} | Shows some statistics form the world data
 | seed | /seed | show the player the seed
 | tempban | /tempban {player} {time} {m/h} {reason... | Bans a player for a certain time
 | tempunban | /tempunban {player} | Unbans a tempbaned player
 | commmands | /commands {command} {on/off} | Turn on or off commands of the plugin
-| home | /home {set/remove} | Set a home and teleport each 5 minutes to the position
+ 0| home | /home {set/remove} | Set a home and teleport each 5 minutes to the position
 | zone | /zone {add/remove/friend/enemy} {add/remove/list/x} {player/z} {zoneName/x2} {z2} | Lets you set a zone with a specified name, all the friends of a zone are able to add/remove enemies or add/remove friends of the zone. When all friends of a zone are offline the area will be protected to enemies by the plugin. If the friends are online enemies will get a warning by entering the zone and will be given bad effects.
 
 ## Permissions

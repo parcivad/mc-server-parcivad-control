@@ -4,12 +4,65 @@
 [![Paper](https://img.shields.io/badge/Paper-%20-orange?&style=flat-square)](https://papermc.io)
 [![Discord](https://img.shields.io/discord/690934524955197471?label=Discord&logo=discord&style=flat-square)](https://discord.gg/C2HrEeCQ)
 
-# mc-server-parcivad-control
-ParcivadControl is a plugin for your simple survival server. It brings some helpful commands for all your players.
-You can customize or limit the commands with the `/commands` command that can turn commands of the plugin on or off.
+# parcivadControl
+ParcivadControl is a mc plugin that brings some popular and helpful commands in your survival Server. It also includes a prefix Tablist, clean Chat and Admin-Commands.\
+One of the biggest differences to other plugins is that you have to choice to decide what feature is active or not. With `/commands` you can turn specified features of and customize the plugin for your need. 
 
-## Tablist
-The plugin will create plugin prefix for players with given permission. The prefix will also show up in chat with other format
+## Features
+### Commands
+All commands can be turned on or off with the `/commands` Command.\
+
+__How to use the command__\
+When you first installed the plugin and use a command the plugin will give you a deny for using it because its not active.
+With `/commands` you can change the state to active
+
+<p align="center">
+  <img width="auto" height="auto" src="https://github.com/parcivad/img/blob/main/Home%20Connect%20Login.png">
+</p>
+
+After that the command will work, you can easily turn it off again at any time.
+
+### Enderchest
+With `/ec`, short form for enderchest, you can open your own enderchest at any time in the game. Its like a "backpack" function. The only requirement needed for the player is the achievment of
+opening a enderchest in this world. Roles with the permission `enderchest.open` are able to open the enderchest of other players.
+
+__How to use the command__\
+This command is not complex. Just type `/ec` and a inventory of your enderchest will popup. To open a enderchest of another player you can type his name at the second argument of the command.
+
+<p align="center">
+  <img width="auto" height="auto" src="https://github.com/parcivad/img/blob/main/Home%20Connect%20Login.png">
+</p>
+
+### Teleportation Request
+With the popular `/tpa` command you can ask other online players to teleport to them. They can accept your request or deny it. In the first case you would be teleported to the player you requested. Important to know is that there is no cooldown for the teleportation.
+
+__How to use the command__\
+To start you have to request a player for a teleportation. For that just type `/tpa {player}`.\
+The player then will get a request in his chat
+<p align="center">
+  <img width="auto" height="auto" src="https://github.com/parcivad/img/blob/main/Home%20Connect%20Login.png">
+</p>
+
+The player can decide to accept or deny by typing the command. Alternative he can _hover_ over `accept` or `deny` and click to take action.
+<p align="center">
+  <img width="auto" height="auto" src="https://github.com/parcivad/img/blob/main/Home%20Connect%20Login.png">
+</p>
+
+### Teleportation Request
+With the popular `/tpa` command you can ask other online players to teleport to them. They can accept your request or deny it. In the first case you would be teleported to the player you requested. Important to know is that there is no cooldown for the teleportation.
+
+__How to use the command__\
+To start you have to request a player for a teleportation. For that just type `/tpa {player}`.\
+The player then will get a request in his chat
+<p align="center">
+  <img width="auto" height="auto" src="https://github.com/parcivad/img/blob/main/Home%20Connect%20Login.png">
+</p>
+
+The player can decide to accept or deny by typing the command. Alternative he can _hover_ over `accept` or `deny` and click to take action.
+<p align="center">
+  <img width="auto" height="auto" src="https://github.com/parcivad/img/blob/main/Home%20Connect%20Login.png">
+</p>
+
 
 ## Commands
 List of all available commands

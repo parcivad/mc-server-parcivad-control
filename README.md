@@ -21,6 +21,7 @@ One of the biggest differences to other plugins is that you have to choice to de
   - [Lock](#lock)
   - [Inventory](#inventory)
   - [Zone](#zone)
+  - [Chat](#chat)
   - [Tempban](#tempban)
   - [Tempunban](#tempunban)
 - [Tablist](#tablist)

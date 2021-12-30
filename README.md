@@ -164,7 +164,7 @@ With `/pos delete {name}` you can easily delete your saved locations.
 
 ### Zone
 Zone gives the opportunity to select an area that will be protected from enemies and welcome friends.\
-The Zone function is build up a of a friend/neutral/enemy table.
+The Zone function is build up of a friend/neutral/enemy table.
 
 | Friends | Neutral | Enemy | 
 |-----|-----|-----|

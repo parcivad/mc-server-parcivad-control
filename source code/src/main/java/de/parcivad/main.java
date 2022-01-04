@@ -4,16 +4,13 @@ import de.parcivad.command.*;
 import de.parcivad.listener.*;
 import de.parcivad.tools.tpsTracker;
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scoreboard.Scoreboard;
-import org.bukkit.scoreboard.ScoreboardManager;
 import org.bukkit.scoreboard.Team;
 import de.parcivad.config.CustomConfiguration;
 import de.parcivad.tools.color;
 
-import java.awt.*;
 import java.util.*;
 import java.util.logging.Logger;
 

@@ -10,6 +10,7 @@ import org.bukkit.entity.Player;
 import de.parcivad.main;
 
 import java.util.*;
+import java.util.stream.Stream;
 
 import static de.parcivad.main.*;
 
@@ -72,6 +73,17 @@ public class pos implements CommandExecutor, TabCompleter {
                 p.sendMessage(prefixDeny + "Es existiert keine Position mit diesem Namen!");
             }
 
+        } else if ( args[0].equals("list") ) { // /pos delete {name}
+            // get positions
+            Set<String> positions = plugin.PlayerConfig.get().getConfigurationSection("User." + p.getUniqueId() + ".pos").getKeys(false);
+
+            if ( !positions.isEmpty() ) {
+                p.sendMessage(prefix + "Your saved locations:");
+                positions.forEach((pos) -> { p.sendMessage(prefix + color.success + pos);});
+            } else {
+                p.sendMessage(prefix + "Keine Locations " + color.important + "existiert " + color.normal + "unter deinem Account !");
+            }
+
         } else if ( args.length == 1 ) { // /pos {name}
 
             String posName = args[0].toString();
@@ -95,10 +107,14 @@ public class pos implements CommandExecutor, TabCompleter {
 
         switch ( args.length ) {
             case 1:
-                String[] firstArguments = new String[]{"save", "delete", "name"};
+                String[] firstArguments = new String[]{"save", "delete", "list"};
                 return Arrays.asList( firstArguments );
             case 2:
-                return Collections.singletonList("name");
+                // get player
+                Player p = (Player) sender;
+                // get all zones from the config
+                Set<String> positions = plugin.PlayerConfig.get().getConfigurationSection("User." + p.getUniqueId() + ".pos").getKeys(false);
+                return new ArrayList<String>(positions);
             default:
                 return null;
         }

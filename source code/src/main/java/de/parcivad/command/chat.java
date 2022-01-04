@@ -28,9 +28,11 @@ public class chat implements CommandExecutor, TabCompleter {
     public boolean onCommand(CommandSender sender, Command cmd, String arg2, String[] args) {
         // Cancel the command for console and check if it's active
         if ( !(sender instanceof Player) ) { log.warning(ANSI_RED + " That Command is not optimized for console!" + ANSI_RESET); return true; }
-        if ( !checkActive.check("inv") ) { sender.sendMessage( prefixDeny + color.important + "Dieser Befehl ist nicht aktiv!"); }
+        if ( !checkActive.check("inv") ) { sender.sendMessage( prefixDeny + color.important + "This command is not active!"); }
         // get player
         Player p = (Player) sender;
+
+        if ( args[0].isEmpty() ) { p.sendMessage(prefix + "Command: " + color.highlight + "/chat public/privat/broadcast {player/message} {player..."); return false; }
 
         switch ( args[0] ) {
             case "public":

@@ -65,9 +65,10 @@ public class ZoneListener implements Listener {
                     // bad effects
                     harm(p);
                     // notify
-                    notifyFriends(zoneID, prefixDeny + color.normal + "An enemy " + color.important + "entered " + color.normal + "your zone!");
+                    notifyFriends(zoneID, prefixDeny + color.normal + "The enemy " + color.important + p.getName() + " entered " + color.normal + "your zone " + color.info + plugin.PlayerConfig.get().getString("Zone." + zoneID + ".name") + color.normal + "!");
                     p.sendMessage(prefix + "You entered " + color.important + plugin.PlayerConfig.get().getString("Zone." + zoneID + ".name") + color.normal + " as an " + color.important + "enemy!" );
-
+                    // log
+                    log.info("[Zone] Enemy " + color.important + p.getName() + " entered " + color.info + plugin.PlayerConfig.get().getString("Zone." + zoneID + ".name") );
                 } else {
                     noHarm(p);
                 }
@@ -89,8 +90,10 @@ public class ZoneListener implements Listener {
                     nearZone.put(p, nearbyZoneID);
                     zoneEntered.remove(p);
                     // notify for the player
-                    notifyFriends(nearbyZoneID, prefixDeny + color.normal + "An enemy " + color.highlight + "is near " + color.normal + "your zone!");
+                    notifyFriends(nearbyZoneID, prefixDeny + color.normal + "The enemy " + color.highlight + p.getName() + " is near " + color.normal + "your zone " + color.info + plugin.PlayerConfig.get().getString("Zone." + nearbyZoneID + ".name") + color.normal + "!");
                     p.sendMessage(prefix + "You are " + color.highlight + "near a zone " + color.normal + "that marked you as an enemy!");
+                    // log
+                    log.info("[Zone] Enemy " + color.important + p.getName() + " is near " + color.info + plugin.PlayerConfig.get().getString("Zone." + zoneID + ".name") );
                 }
             }
             return;

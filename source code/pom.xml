@@ -69,9 +69,6 @@
                     <include>*.yml</include>
                 </includes>
             </resource>
-            <resource>
-                <directory>~/Desktop/Spigot</directory>
-            </resource>
         </resources>
     </build>
 

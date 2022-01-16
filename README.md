@@ -266,6 +266,8 @@ Find the texture in a minecraft command:\
 
 The highlighted part is where the texture is saved.
 
+[Here](https://freshcoal.com/maincollection) you can find commands with textures in it.
+
 ## Tablist
 The plugin will create other chat format and a prefix for players with these Roles
 

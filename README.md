@@ -24,6 +24,7 @@ One of the biggest differences to other plugins is that you have to choice to de
   - [Chat](#chat)
   - [Tempban](#tempban)
   - [Tempunban](#tempunban)
+- [MiniBlocks](#miniblocks)
 - [Tablist](#tablist)
 - [Comment](#comment) 
   
@@ -242,6 +243,21 @@ To Broadcast type `/chat broadcast {message...` and it will appear bigger in cha
 - permission: chat.color | Color codes in chat
 - permission: chat.broadcast | Broadcast function
 ```
+
+## MiniBlocks
+MiniBlocks are a simple crafting feature. You can add your own textured heads as an crafting recipe. In the `MiniBlockConfig.yml` you can set a minecraft material and the texture that should be the result of the crafting.
+For example [(BIGGER LIST)](https://github.com/parcivad/mc-server-parcivad-control/blob/main/example/MiniBlockConfig.yml):
+```yml
+textures:
+  APPLE: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2JiMzExZjNiYTFjMDdjM2QxMTQ3Y2QyMTBkODFmZTExZmQ4YWU5ZTNkYjIxMmEwZmE3NDg5NDZjMzYzMyJ9fX0=
+```
+After the recipes are loaded (look up for console log message) it is possible to craft a miniBlock by using the minecraft material in the middle of the crafting table surrounded by glass blocks.
+<p align="left">
+  <img width="auto" height="auto" src="https://github.com/parcivad/mc-server-parcivad-control/blob/main/img/zone-friend-near.png?raw=true">
+  <img width="auto" height="auto" src="https://github.com/parcivad/mc-server-parcivad-control/blob/main/img/zone-friend-in.png?raw=true">
+</p>
+
+When the material is not set in the `MiniBlockConfig.yml` there will be no crafting recipe!
 ## Tablist
 The plugin will create other chat format and a prefix for players with these Roles
 

@@ -4,8 +4,10 @@ import de.parcivad.main;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
+import java.util.logging.Level;
+
+import static org.bukkit.Bukkit.getLogger;
 
 public class CustomConfiguration {
 
@@ -44,4 +46,17 @@ public class CustomConfiguration {
         this.customFile = YamlConfiguration.loadConfiguration(this.file);
     }
 
+    private void copyDefaultConfig(InputStream input, File actual, String name) {
+        try (FileOutputStream output = new FileOutputStream(actual)) {
+            byte[] buf = new byte[8192];
+            int length;
+            while ((length = input.read(buf)) > 0) {
+                output.write(buf, 0, length);
+            }
+
+            getLogger().info("Default configuration file written: " + name);
+        } catch (IOException ex) {
+            getLogger().log(Level.WARNING, "Failed to write default config file", ex);
+        }
+    }
 }

@@ -259,7 +259,7 @@ After the recipes are loaded (look up for console log message) it is possible to
 
 When the material is not set in the `MiniBlockConfig.yml` there will be no crafting recipe!
 
-Find the texture in a minecraft command:\
+Find the texture in a minecraft command:
 
 > /give @p skull 1 3 {display:{Name:"Golden Clock"},SkullOwner:{Id:"c0479b63-4eb6-4f07-a685-34e5df12feba",Properties:{textures:> >>>[{Value:"**eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmZlOGNmZjc1ZjdkNDMzMjYwYWYxZWNiMmY3NzNiNGJjMzgxZDk1MWRlNGUyZW
 > I2NjE0MjM3NzlhNTkwZTcyYiJ9fX0=**"}]}}}

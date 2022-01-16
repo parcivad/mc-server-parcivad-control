@@ -246,7 +246,7 @@ To Broadcast type `/chat broadcast {message...` and it will appear bigger in cha
 
 ## MiniBlocks
 MiniBlock is a simple crafting feature that allows you to add textured heads to your survival world.\
-You can add your own textured heads as an crafting recipe in the `MiniBlockConfig.yml` you can set a minecraft material and the texture that should be the result of the crafting.
+You can add your own textured heads as an crafting recipe in the `MiniBlockConfig.yml`. Where you can set a minecraft material and the texture that should be the result of the crafting.
 For example [(BIGGER LIST)](https://github.com/parcivad/mc-server-parcivad-control/blob/main/example/MiniBlockConfig.yml):
 ```yml
 textures:

@@ -187,7 +187,7 @@ Like you can see there are no enemies in the list and only one friend. You can f
   <img width="auto" height="auto" src="https://github.com/parcivad/mc-server-parcivad-control/blob/main/img/zone-add.png?raw=true">
 </p>
 
-To delete a zone with `/zone delete {name}`, but be carefull because this step cant be reversed!
+To delete a zone with `/zone delete {name}`, but be careful because this step cant be reversed!
 
 ```diff
 - permission: manage.zone | ADD OR REMOVE ZONE
